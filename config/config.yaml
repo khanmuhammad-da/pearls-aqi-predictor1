@@ -1,0 +1,50 @@
+project:
+  name: "Pearls AQI Predictor"
+  environment: "development"
+
+data:
+  raw_dir: "data/raw"
+  interim_dir: "data/interim"
+  processed_dir: "data/processed"
+
+models:
+  artifact_dir: "models/artifacts"
+  metadata_dir: "models/metadata"
+
+forecast:
+  horizon_hours: 72
+
+location:
+  default_city: "Lahore"
+  default_country: "Pakistan"
+
+api:
+  open_meteo:
+    air_quality_url: "https://air-quality-api.open-meteo.com/v1/air-quality"
+    weather_url: "https://api.open-meteo.com/v1/forecast"
+    geocoding_url: "https://geocoding-api.open-meteo.com/v1/search"
+    historical_weather_url: "https://archive-api.open-meteo.com/v1/archive"
+    timezone: "auto"
+
+    air_quality_variables:
+      - pm2_5
+      - pm10
+      - carbon_monoxide
+      - nitrogen_dioxide
+      - sulphur_dioxide
+      - ozone
+      - european_aqi
+      - us_aqi
+
+    weather_variables:
+      - temperature_2m
+      - relative_humidity_2m
+      - precipitation
+      - surface_pressure
+      - wind_speed_10m
+      - wind_direction_10m
+      - cloud_cover
+
+aqi:
+  enabled: true
+  target: "us_aqi"

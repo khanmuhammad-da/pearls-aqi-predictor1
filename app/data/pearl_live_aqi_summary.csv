@@ -1,0 +1,2 @@
+city,area,country,latitude,longitude,timezone,station,current_aqi,current_category,current_source,current_observed_at,forecast_minimum,forecast_maximum,forecast_mean,forecast_median,forecast_category,forecast_trend,dominant_pollutant,pollutants_available,pollutants_total,alert_count,generated_at_utc
+Lahore,Lahore Cantonment,Pakistan,31.5204,74.3587,Asia/Karachi,Lahore Cantonment,157.0,Unhealthy,observed_dataset,2026-08-28T23:00:00+00:00,120.427,184.413,151.797,153.867,Unhealthy,falling,NO2,6,6,1,2026-08-29T10:32:46.745918+00:00

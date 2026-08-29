@@ -1,0 +1,45 @@
+﻿# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Secrets
+.env
+.env.*
+!.env.example
+
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw/intermediate data
+data/raw/*
+data/interim/*
+data/processed/*
+
+# Model artifacts
+models/artifacts/*
+models/metadata/*
+
+# Generated prediction/visualization reports
+reports/predictions/*
+reports/visualizations/*
+
+# Local deployment packages
+reports/final_public_deployment/
+reports/production_deployment/
+reports/public_production_deployment/
+
+# Python cache
+app/__pycache__/
+scripts/__pycache__/

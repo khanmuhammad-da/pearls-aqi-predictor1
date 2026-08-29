@@ -1,0 +1,3039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>PEARLS — Lahore Air Intelligence</title>
+
+<style>
+
+:root {
+    --ink: #103e3c;
+    --ink-soft: #3f6662;
+    --cream: #f4f6ef;
+    --paper: #fbfcf8;
+    --lime: #dce96d;
+    --lime-dark: #b8ca3e;
+    --coral: #ef6c50;
+    --orange: #e59a43;
+    --gold: #b9a34d;
+    --blue: #4d94a5;
+    --green: #78a48d;
+    --line: #d9e2da;
+    --white: #ffffff;
+    --shadow: 0 12px 34px rgba(16, 62, 60, .07);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family:
+        Inter,
+        ui-sans-serif,
+        system-ui,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+button {
+    font: inherit;
+}
+
+.app {
+    width: 100%;
+    min-height: 100vh;
+}
+
+/* ============================================================
+   TOP BAR
+   ============================================================ */
+
+.topbar {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 16px 28px;
+
+    background: rgba(16, 62, 60, .98);
+    color: white;
+
+    border-bottom: 1px solid rgba(255,255,255,.12);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-mark {
+    width: 32px;
+    height: 32px;
+    border-radius: 9px;
+
+    display: grid;
+    place-items: center;
+
+    background: var(--lime);
+    color: var(--ink);
+
+    font-weight: 900;
+}
+
+.brand-name {
+    font-size: 15px;
+    font-weight: 900;
+    letter-spacing: .15em;
+}
+
+.brand-sub {
+    margin-top: 1px;
+    font-size: 8px;
+    letter-spacing: .18em;
+    opacity: .65;
+}
+
+.top-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.top-button {
+    padding: 8px 12px;
+    border-radius: 8px;
+
+    color: white;
+    background: transparent;
+
+    border: 1px solid rgba(255,255,255,.18);
+
+    cursor: pointer;
+}
+
+.top-button:hover {
+    background: rgba(255,255,255,.08);
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero {
+    min-height: 430px;
+
+    padding:
+        64px
+        clamp(24px, 6vw, 110px)
+        70px;
+
+    background: var(--ink);
+    color: white;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 430px;
+    height: 430px;
+
+    border-radius: 50%;
+
+    border: 14px solid rgba(220,233,109,.08);
+
+    right: 7%;
+    bottom: -240px;
+}
+
+.eyebrow {
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: .23em;
+    font-weight: 900;
+    opacity: .62;
+}
+
+.live-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--lime);
+    margin-right: 6px;
+}
+
+.hero-grid {
+    position: relative;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: minmax(0, 1.3fr) minmax(350px, .7fr);
+
+    gap: 60px;
+    align-items: end;
+}
+
+.hero h1 {
+    margin: 22px 0 18px;
+
+    max-width: 800px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(56px, 8vw, 120px);
+
+    line-height: .87;
+    letter-spacing: -.055em;
+}
+
+.hero h1 em {
+    color: var(--lime);
+    font-weight: normal;
+}
+
+.hero-description {
+    max-width: 680px;
+
+    font-size: 16px;
+    line-height: 1.65;
+
+    color: rgba(255,255,255,.72);
+}
+
+.hero-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    border-left: 1px solid rgba(255,255,255,.22);
+    padding-left: 25px;
+
+    gap: 20px;
+}
+
+.meta-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .17em;
+    opacity: .55;
+}
+
+.meta-value {
+    margin-top: 7px;
+    font-weight: 800;
+}
+
+/* ============================================================
+   MAIN
+   ============================================================ */
+
+.main {
+    width: min(1800px, 100%);
+    margin: auto;
+
+    padding:
+        58px
+        clamp(20px, 4vw, 70px)
+        90px;
+}
+
+.section {
+    margin-bottom: 66px;
+}
+
+.section-head {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 20px;
+}
+
+.section-number {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: 900;
+    color: #75908a;
+}
+
+.section-title {
+    margin: 8px 0 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(28px, 3vw, 42px);
+
+    letter-spacing: -.025em;
+}
+
+.card {
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+
+    border-radius: 15px;
+
+    box-shadow: var(--shadow);
+}
+
+/* ============================================================
+   LOCATION
+   ============================================================ */
+
+.location-grid {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 16px;
+}
+
+.location-primary {
+    min-height: 330px;
+
+    padding: 34px;
+
+    background: var(--lime);
+
+    border-radius: 16px;
+}
+
+.location-primary h3 {
+    margin: 12px 0 3px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(48px, 6vw, 78px);
+
+    font-weight: 500;
+
+    letter-spacing: -.05em;
+}
+
+.location-sub {
+    font-size: 15px;
+    color: rgba(16,62,60,.72);
+}
+
+.location-divider {
+    margin: 42px 0 25px;
+
+    border-top: 1px solid rgba(16,62,60,.18);
+}
+
+.location-status {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    font-size: 10px;
+    font-weight: 900;
+    letter-spacing: .06em;
+
+    text-transform: uppercase;
+}
+
+.badge.unhealthy {
+    background: #ffe1da;
+    color: #bf4d38;
+}
+
+.badge.moderate {
+    background: #fff0bd;
+    color: #896b19;
+}
+
+.badge.good {
+    background: #dff0db;
+    color: #477a4d;
+}
+
+.current-small {
+    text-align: right;
+}
+
+.current-small-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    opacity: .62;
+}
+
+.current-small-value {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.location-details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+.detail-card {
+    padding: 28px;
+    min-height: 157px;
+}
+
+.detail-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .16em;
+    color: #738982;
+    font-weight: 900;
+}
+
+.detail-value {
+    margin-top: 15px;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+/* ============================================================
+   AQI HERO / GAUGE
+   ============================================================ */
+
+.aqi-hero {
+    display: grid;
+
+    grid-template-columns:
+        minmax(370px, .85fr)
+        minmax(550px, 1.15fr);
+
+    gap: 20px;
+
+    padding: 30px;
+}
+
+.aqi-value-panel {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.aqi-number {
+    margin-top: 8px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: clamp(100px, 12vw, 180px);
+
+    line-height: .85;
+
+    letter-spacing: -.07em;
+
+    color: var(--coral);
+}
+
+.aqi-category {
+    margin-top: 20px;
+
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.aqi-explanation {
+    max-width: 480px;
+
+    margin-top: 16px;
+
+    color: var(--ink-soft);
+
+    line-height: 1.6;
+}
+
+.aqi-source {
+    margin-top: 20px;
+
+    font-size: 10px;
+
+    text-transform: uppercase;
+    letter-spacing: .12em;
+
+    color: #7b928c;
+}
+
+.gauge-panel {
+    min-height: 430px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 20px;
+}
+
+.gauge-wrap {
+    width: 100%;
+    max-width: 780px;
+
+    margin: auto;
+}
+
+.gauge-svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+}
+
+.gauge-track {
+    fill: none;
+    stroke-width: 34;
+    stroke-linecap: butt;
+}
+
+.gauge-marker {
+    fill: white;
+    stroke: var(--coral);
+    stroke-width: 7;
+}
+
+.gauge-marker-line {
+    stroke: var(--ink);
+    stroke-width: 5;
+    stroke-linecap: round;
+}
+
+.gauge-center {
+    fill: var(--paper);
+    stroke: var(--ink);
+    stroke-width: 3;
+}
+
+.gauge-center-number {
+    font-size: 27px;
+    font-weight: 900;
+    fill: var(--ink);
+}
+
+.gauge-label {
+    font-size: 13px;
+    font-weight: 800;
+    fill: var(--ink);
+}
+
+.gauge-scale {
+    font-size: 13px;
+    font-weight: 800;
+    fill: #78908a;
+}
+
+.gauge-legend {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    gap: 5px;
+
+    margin-top: 5px;
+}
+
+.gauge-legend div {
+    font-size: 8px;
+    text-align: center;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+
+    color: #748983;
+}
+
+/* ============================================================
+   KPI ROW
+   ============================================================ */
+
+.kpi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.kpi {
+    padding: 26px;
+    min-height: 155px;
+}
+
+.kpi-label {
+    font-size: 9px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #748b85;
+    font-weight: 900;
+}
+
+.kpi-value {
+    margin-top: 18px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 42px;
+    line-height: 1;
+}
+
+.kpi-sub {
+    margin-top: 12px;
+    color: #748b85;
+    font-size: 11px;
+}
+
+/* ============================================================
+   POLLUTANTS
+   ============================================================ */
+
+.pollutant-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(6, minmax(0, 1fr));
+
+    gap: 12px;
+}
+
+.pollutant {
+    padding: 21px;
+
+    min-height: 210px;
+
+    position: relative;
+}
+
+.pollutant-dot {
+    position: absolute;
+    top: 21px;
+    right: 21px;
+
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+    background: var(--coral);
+}
+
+.pollutant-symbol {
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.pollutant-value {
+    margin-top: 25px;
+
+    font-size: 24px;
+    font-weight: 900;
+}
+
+.pollutant-unit {
+    font-size: 9px;
+    color: #7d928c;
+}
+
+.pollutant-mean {
+    margin-top: 6px;
+
+    font-size: 9px;
+    color: #7d928c;
+}
+
+.bar {
+    height: 6px;
+
+    margin-top: 22px;
+
+    background: #e5ebe4;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+}
+
+.bar-fill {
+    height: 100%;
+
+    background: var(--coral);
+
+    border-radius: inherit;
+}
+
+.pollutant-footer {
+    margin-top: 9px;
+
+    display: flex;
+    justify-content: space-between;
+
+    font-size: 8px;
+    text-transform: uppercase;
+    letter-spacing: .06em;
+
+    color: #738982;
+}
+
+/* ============================================================
+   FORECAST
+   ============================================================ */
+
+.forecast-grid {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1.45fr)
+        minmax(350px, .55fr);
+
+    gap: 16px;
+}
+
+.chart-card {
+    padding: 28px;
+    min-height: 500px;
+}
+
+.chart-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+.chart-title {
+    font-weight: 900;
+    font-size: 17px;
+}
+
+.chart-subtitle {
+    margin-top: 5px;
+    font-size: 10px;
+    color: #78908a;
+}
+
+.peak {
+    text-align: right;
+}
+
+.peak-value {
+    color: var(--coral);
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 35px;
+}
+
+.peak-label {
+    font-size: 8px;
+    text-transform: uppercase;
+    color: #79908a;
+}
+
+#forecastChart {
+    width: 100%;
+    height: 370px;
+
+    margin-top: 20px;
+}
+
+.forecast-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.grid-line {
+    stroke: #dfe7df;
+    stroke-width: 1;
+    stroke-dasharray: 5 8;
+}
+
+.chart-line {
+    fill: none;
+    stroke: var(--coral);
+    stroke-width: 4;
+    stroke-linejoin: round;
+    stroke-linecap: round;
+}
+
+.chart-area {
+    fill: rgba(239,108,80,.10);
+}
+
+.chart-point {
+    fill: var(--paper);
+    stroke: var(--coral);
+    stroke-width: 4;
+}
+
+.axis-text {
+    fill: #7b918b;
+    font-size: 10px;
+}
+
+.ranking-card {
+    padding: 28px;
+
+    background: var(--ink);
+    color: white;
+
+    min-height: 500px;
+}
+
+.ranking-title {
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.ranking-sub {
+    margin-top: 5px;
+
+    color: rgba(255,255,255,.55);
+
+    font-size: 10px;
+}
+
+.ranking-item {
+    margin-top: 25px;
+}
+
+.ranking-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ranking-name {
+    font-weight: 900;
+}
+
+.ranking-value {
+    font-size: 12px;
+    opacity: .75;
+}
+
+.ranking-track {
+    height: 6px;
+
+    margin-top: 9px;
+
+    background: rgba(255,255,255,.14);
+
+    border-radius: 999px;
+}
+
+.ranking-fill {
+    height: 100%;
+
+    background: var(--coral);
+
+    border-radius: inherit;
+}
+
+/* ============================================================
+   INSIGHT PANEL
+   ============================================================ */
+
+.insight-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr;
+
+    gap: 16px;
+}
+
+.insight {
+    padding: 30px;
+    min-height: 180px;
+}
+
+.insight-number {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: .15em;
+    color: #778d87;
+}
+
+.insight h3 {
+    margin: 13px 0;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 24px;
+}
+
+.insight p {
+    margin: 0;
+
+    color: #58736e;
+
+    line-height: 1.65;
+
+    font-size: 13px;
+}
+
+/* ============================================================
+   EVENTS
+   ============================================================ */
+
+.event-kpis {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.event-card {
+    padding: 25px;
+    min-height: 135px;
+}
+
+.event-value {
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 31px;
+}
+
+.event-label {
+    margin-top: 7px;
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: .13em;
+
+    color: #788f89;
+}
+
+/* ============================================================
+   TABLE
+   ============================================================ */
+
+.table-card {
+    overflow: hidden;
+}
+
+.table-wrap {
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+
+th {
+    padding: 16px 18px;
+
+    text-align: left;
+
+    background: #eef2eb;
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+    letter-spacing: .14em;
+
+    color: #738a84;
+}
+
+td {
+    padding: 15px 18px;
+
+    border-top: 1px solid var(--line);
+}
+
+td.aqi {
+    font-weight: 900;
+}
+
+.mini-badge {
+    display: inline-block;
+
+    padding: 5px 9px;
+
+    border-radius: 999px;
+
+    font-size: 8px;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+.footer {
+    padding: 25px 0;
+
+    border-top: 1px solid var(--line);
+
+    display: flex;
+    justify-content: space-between;
+
+    color: #78908a;
+
+    font-size: 10px;
+}
+
+.footer strong {
+    color: var(--ink);
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1200px) {
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-meta {
+        max-width: 600px;
+    }
+
+    .pollutant-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .aqi-hero {
+        grid-template-columns: 1fr;
+    }
+
+    .forecast-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 850px) {
+
+    .topbar {
+        padding: 13px 17px;
+    }
+
+    .hero {
+        padding: 45px 22px;
+    }
+
+    .main {
+        padding: 40px 17px 70px;
+    }
+
+    .location-grid,
+    .location-details {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-grid,
+    .event-kpis {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pollutant-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .insight-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gauge-panel {
+        min-height: 330px;
+    }
+}
+
+@media (max-width: 520px) {
+
+    .hero h1 {
+        font-size: 54px;
+    }
+
+    .hero-meta {
+        grid-template-columns: 1fr;
+    }
+
+    .kpi-grid,
+    .event-kpis,
+    .pollutant-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .location-primary {
+        min-height: 280px;
+    }
+
+    .aqi-hero {
+        padding: 15px;
+    }
+
+    .aqi-value-panel {
+        padding: 20px;
+    }
+
+    .aqi-number {
+        font-size: 100px;
+    }
+
+    .gauge-panel {
+        padding: 0;
+    }
+
+    .footer {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+<div class="app">
+
+<!-- =========================================================
+     TOP BAR
+     ========================================================= -->
+
+<header class="topbar">
+
+    <div class="brand">
+
+        <div class="brand-mark">
+            P
+        </div>
+
+        <div>
+            <div class="brand-name">
+                PEARLS
+            </div>
+
+            <div class="brand-sub">
+                AIR INTELLIGENCE
+            </div>
+        </div>
+
+    </div>
+
+    <div class="top-actions">
+
+        <button
+            class="top-button"
+            onclick="window.print()"
+        >
+            Print / Export
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+     ========================================================= -->
+
+<section class="hero">
+
+    <div class="hero-grid">
+
+        <div>
+
+            <div class="eyebrow">
+                <span class="live-dot"></span>
+                Live production intelligence
+            </div>
+
+            <h1>
+                Lahore,
+                <em>read clearly.</em>
+            </h1>
+
+            <div class="hero-description">
+                Location intelligence, pollutant composition and
+                a 72-hour production forecast brought together in
+                one environmental intelligence view.
+            </div>
+
+        </div>
+
+        <div class="hero-meta">
+
+            <div>
+                <div class="meta-label">
+                    Monitoring location
+                </div>
+
+                <div class="meta-value">
+                    Lahore Cantonment
+                </div>
+            </div>
+
+            <div>
+                <div class="meta-label">
+                    Forecast horizon
+                </div>
+
+                <div class="meta-value">
+                    72 hours
+                </div>
+            </div>
+
+            <div>
+                <div class="meta-label">
+                    Coordinates
+                </div>
+
+                <div class="meta-value">
+                    31.5205° N<br>
+                    74.4036° E
+                </div>
+            </div>
+
+            <div>
+                <div class="meta-label">
+                    Timezone
+                </div>
+
+                <div class="meta-value">
+                    PKT · UTC+05:00
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<main class="main">
+
+
+<!-- =========================================================
+     LOCATION
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                01 / Location intelligence
+            </div>
+
+            <h2 class="section-title">
+                One city. Six pollution signals.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="location-grid">
+
+        <div class="location-primary">
+
+            <div class="eyebrow">
+                Monitoring location
+            </div>
+
+            <h3>
+                Lahore
+            </h3>
+
+            <div class="location-sub">
+                Lahore Cantonment · Pakistan · PKT
+            </div>
+
+            <div class="location-divider"></div>
+
+            <div class="location-status">
+
+                <div id="locationBadge"></div>
+
+                <div class="current-small">
+
+                    <div class="current-small-label">
+                        Current air quality
+                    </div>
+
+                    <div class="current-small-value"
+                         id="locationAQI">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="location-details">
+
+            <div class="card detail-card">
+
+                <div class="detail-label">
+                    Latitude
+                </div>
+
+                <div class="detail-value">
+                    31.5205° N
+                </div>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <div class="detail-label">
+                    Longitude
+                </div>
+
+                <div class="detail-value">
+                    74.4036° E
+                </div>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <div class="detail-label">
+                    Station
+                </div>
+
+                <div class="detail-value">
+                    Lahore Cantonment
+                </div>
+
+            </div>
+
+            <div class="card detail-card">
+
+                <div class="detail-label">
+                    Timezone
+                </div>
+
+                <div class="detail-value">
+                    PKT / UTC+05:00
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CURRENT AQI + GAUGE
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                02 / Current air quality
+            </div>
+
+            <h2 class="section-title">
+                Where the air is now.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="card aqi-hero">
+
+        <div class="aqi-value-panel">
+
+            <div class="eyebrow">
+                Current AQI
+            </div>
+
+            <div
+                class="aqi-number"
+                id="currentAQINumber"
+            >
+                --
+            </div>
+
+            <div
+                class="aqi-category"
+                id="currentAQICategory"
+            >
+                --
+            </div>
+
+            <div
+                class="aqi-explanation"
+                id="healthMessage"
+            >
+            </div>
+
+            <div
+                class="aqi-source"
+                id="aqiSource"
+            >
+            </div>
+
+        </div>
+
+
+        <div class="gauge-panel">
+
+            <div class="gauge-wrap">
+
+                <svg
+                    class="gauge-svg"
+                    viewBox="0 0 760 430"
+                    aria-label="AQI 0 to 500 gauge"
+                >
+
+                    <!-- Gauge arcs -->
+
+                    <path
+                        class="gauge-track"
+                        stroke="#43c93b"
+                        d="M 100 330 A 280 280 0 0 1 193 122"
+                    />
+
+                    <path
+                        class="gauge-track"
+                        stroke="#f4dc27"
+                        d="M 193 122 A 280 280 0 0 1 380 50"
+                    />
+
+                    <path
+                        class="gauge-track"
+                        stroke="#f5a127"
+                        d="M 380 50 A 280 280 0 0 1 567 122"
+                    />
+
+                    <path
+                        class="gauge-track"
+                        stroke="#ef493e"
+                        d="M 567 122 A 280 280 0 0 1 660 330"
+                    />
+
+                    <!-- labels -->
+
+                    <text
+                        x="85"
+                        y="365"
+                        class="gauge-scale"
+                    >
+                        0
+                    </text>
+
+                    <text
+                        x="173"
+                        y="105"
+                        class="gauge-scale"
+                    >
+                        100
+                    </text>
+
+                    <text
+                        x="365"
+                        y="30"
+                        class="gauge-scale"
+                    >
+                        200
+                    </text>
+
+                    <text
+                        x="575"
+                        y="105"
+                        class="gauge-scale"
+                    >
+                        300
+                    </text>
+
+                    <text
+                        x="650"
+                        y="365"
+                        class="gauge-scale"
+                    >
+                        500
+                    </text>
+
+
+                    <!-- category labels -->
+
+                    <text
+                        x="115"
+                        y="285"
+                        class="gauge-label"
+                    >
+                        Good
+                    </text>
+
+                    <text
+                        x="240"
+                        y="130"
+                        class="gauge-label"
+                    >
+                        Moderate
+                    </text>
+
+                    <text
+                        x="350"
+                        y="105"
+                        class="gauge-label"
+                    >
+                        Sensitive
+                    </text>
+
+                    <text
+                        x="480"
+                        y="130"
+                        class="gauge-label"
+                    >
+                        Unhealthy
+                    </text>
+
+                    <text
+                        x="585"
+                        y="285"
+                        class="gauge-label"
+                    >
+                        Hazardous
+                    </text>
+
+
+                    <!-- center -->
+
+                    <circle
+                        cx="380"
+                        cy="330"
+                        r="46"
+                        class="gauge-center"
+                    />
+
+                    <text
+                        x="380"
+                        y="339"
+                        text-anchor="middle"
+                        class="gauge-center-number"
+                        id="gaugeCenterNumber"
+                    >
+                        --
+                    </text>
+
+
+                    <!-- dynamic needle -->
+
+                    <line
+                        id="gaugeNeedle"
+                        x1="380"
+                        y1="330"
+                        x2="380"
+                        y2="80"
+                        class="gauge-marker-line"
+                    />
+
+                    <circle
+                        id="gaugeMarker"
+                        cx="380"
+                        cy="50"
+                        r="12"
+                        class="gauge-marker"
+                    />
+
+                </svg>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     KPI
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                03 / Current outlook
+            </div>
+
+            <h2 class="section-title">
+                The numbers that matter.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="kpi-grid">
+
+        <div class="card kpi">
+
+            <div class="kpi-label">
+                Current AQI
+            </div>
+
+            <div
+                class="kpi-value"
+                id="kpiCurrent"
+            >
+                --
+            </div>
+
+            <div class="kpi-sub">
+                Current production reading
+            </div>
+
+        </div>
+
+
+        <div class="card kpi">
+
+            <div class="kpi-label">
+                Forecast maximum
+            </div>
+
+            <div
+                class="kpi-value"
+                id="kpiMax"
+            >
+                --
+            </div>
+
+            <div class="kpi-sub">
+                Peak predicted AQI
+            </div>
+
+        </div>
+
+
+        <div class="card kpi">
+
+            <div class="kpi-label">
+                Forecast mean
+            </div>
+
+            <div
+                class="kpi-value"
+                id="kpiMean"
+            >
+                --
+            </div>
+
+            <div class="kpi-sub">
+                72-hour production average
+            </div>
+
+        </div>
+
+
+        <div class="card kpi">
+
+            <div class="kpi-label">
+                Forecast trend
+            </div>
+
+            <div
+                class="kpi-value"
+                id="kpiTrend"
+            >
+                --
+            </div>
+
+            <div class="kpi-sub">
+                Production trajectory
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     POLLUTANTS
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                04 / Pollution ingredients
+            </div>
+
+            <h2 class="section-title">
+                What is shaping the reading.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="pollutant-grid"
+        id="pollutantGrid"
+    >
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FORECAST
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                05 / Pollution & AQI intelligence
+            </div>
+
+            <h2 class="section-title">
+                A forecast with a shape.
+            </h2>
+
+        </div>
+
+        <div>
+            72-hour production horizon
+        </div>
+
+    </div>
+
+
+    <div class="forecast-grid">
+
+
+        <div class="card chart-card">
+
+            <div class="chart-header">
+
+                <div>
+
+                    <div class="chart-title">
+                        AQI trajectory
+                    </div>
+
+                    <div
+                        class="chart-subtitle"
+                        id="chartSubtitle"
+                    >
+                    </div>
+
+                </div>
+
+                <div class="peak">
+
+                    <div
+                        class="peak-value"
+                        id="peakValue"
+                    >
+                        --
+                    </div>
+
+                    <div class="peak-label">
+                        Peak predicted AQI
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div id="forecastChart"></div>
+
+        </div>
+
+
+        <div class="ranking-card">
+
+            <div class="ranking-title">
+                Pollutant ranking
+            </div>
+
+            <div class="ranking-sub">
+                Relative intensity across the pollution profile
+            </div>
+
+            <div id="ranking"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     INTELLIGENCE
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                06 / Pearl intelligence
+            </div>
+
+            <h2 class="section-title">
+                What the model is telling us.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="insight-grid">
+
+        <div class="card insight">
+
+            <div class="insight-number">
+                Current condition
+            </div>
+
+            <h3>
+                Air quality
+            </h3>
+
+            <p id="insightHealth">
+            </p>
+
+        </div>
+
+
+        <div class="card insight">
+
+            <div class="insight-number">
+                Main driver
+            </div>
+
+            <h3>
+                Pollution signal
+            </h3>
+
+            <p id="insightDriver">
+            </p>
+
+        </div>
+
+
+        <div class="card insight">
+
+            <div class="insight-number">
+                72-hour trajectory
+            </div>
+
+            <h3>
+                Forecast
+            </h3>
+
+            <p id="insightTrajectory">
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     CATEGORY DISTRIBUTION
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                07 / Forecast distribution
+            </div>
+
+            <h2 class="section-title">
+                How the next 72 hours are distributed.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div
+        class="card"
+        style="padding:30px"
+    >
+
+        <div id="categoryDistribution"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     EVENTS
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                08 / Pollution event intelligence
+            </div>
+
+            <h2 class="section-title">
+                The longer context.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="event-kpis">
+
+        <div class="card event-card">
+
+            <div
+                class="event-value"
+                id="eventTotal"
+            >
+                --
+            </div>
+
+            <div class="event-label">
+                Total events
+            </div>
+
+        </div>
+
+
+        <div class="card event-card">
+
+            <div
+                class="event-value"
+                id="eventHigh"
+            >
+                --
+            </div>
+
+            <div class="event-label">
+                High severity
+            </div>
+
+        </div>
+
+
+        <div class="card event-card">
+
+            <div
+                class="event-value"
+                id="eventElevated"
+            >
+                --
+            </div>
+
+            <div class="event-label">
+                Elevated
+            </div>
+
+        </div>
+
+
+        <div class="card event-card">
+
+            <div
+                class="event-value"
+                id="eventDominant"
+            >
+                --
+            </div>
+
+            <div class="event-label">
+                Dominant pollutant
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     NEXT 12 HOURS
+     ========================================================= -->
+
+<section class="section">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="section-number">
+                09 / Forecast detail
+            </div>
+
+            <h2 class="section-title">
+                Next 12 hours.
+            </h2>
+
+        </div>
+
+    </div>
+
+
+    <div class="card table-card">
+
+        <div class="table-wrap">
+
+            <table>
+
+                <thead>
+
+                    <tr>
+                        <th>Hour</th>
+                        <th>Timestamp</th>
+                        <th>Predicted AQI</th>
+                        <th>Category</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="forecastTable">
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+
+<footer class="footer">
+
+    <div>
+        <strong>PEARLS AQI Predictor</strong>
+        · Lahore Intelligence Snapshot
+    </div>
+
+    <div>
+        Production forecast · 72 hours · AQI is modeled, not measured
+    </div>
+
+</footer>
+
+
+</main>
+
+</div>
+
+
+<script>
+
+const DATA = {"meta":{"product":"PEARLS AQI Predictor","dashboard":"Pearl Intelligence Dashboard","step":23,"target":"us_aqi","forecast_horizon":72,"generated_at":"2026-08-29T10:17:47.816793+00:00","model_training":false,"model_selection":false,"validation_test":false,"cache_enabled":true},"location":{"city":"Lahore","area":"Lahore Cantonment","country":"Pakistan","latitude":31.5205,"longitude":74.4036,"station":"Lahore Cantonment","timezone":"PKT","utc_offset":"UTC+05:00"},"current":{"aqi":156.411,"category":"Unhealthy","short_category":"Unhealthy","gauge_position":0.312822,"source":"first production forecast point"},"forecast":{"min":120.427,"max":184.413,"mean":151.797,"median":153.867,"trend":"falling","start":"2026-08-29T00:00:00+00:00","end":"2026-08-31T23:00:00+00:00","records":[{"timestamp":"2026-08-29T00:00:00+00:00","aqi":156.411,"category":"Unhealthy"},{"timestamp":"2026-08-29T01:00:00+00:00","aqi":157.486,"category":"Unhealthy"},{"timestamp":"2026-08-29T02:00:00+00:00","aqi":158.189,"category":"Unhealthy"},{"timestamp":"2026-08-29T03:00:00+00:00","aqi":157.807,"category":"Unhealthy"},{"timestamp":"2026-08-29T04:00:00+00:00","aqi":158.288,"category":"Unhealthy"},{"timestamp":"2026-08-29T05:00:00+00:00","aqi":160.662,"category":"Unhealthy"},{"timestamp":"2026-08-29T06:00:00+00:00","aqi":163.567,"category":"Unhealthy"},{"timestamp":"2026-08-29T07:00:00+00:00","aqi":163.575,"category":"Unhealthy"},{"timestamp":"2026-08-29T08:00:00+00:00","aqi":159.625,"category":"Unhealthy"},{"timestamp":"2026-08-29T09:00:00+00:00","aqi":157.926,"category":"Unhealthy"},{"timestamp":"2026-08-29T10:00:00+00:00","aqi":155.957,"category":"Unhealthy"},{"timestamp":"2026-08-29T11:00:00+00:00","aqi":155.171,"category":"Unhealthy"},{"timestamp":"2026-08-29T12:00:00+00:00","aqi":154.811,"category":"Unhealthy"},{"timestamp":"2026-08-29T13:00:00+00:00","aqi":156.58,"category":"Unhealthy"},{"timestamp":"2026-08-29T14:00:00+00:00","aqi":161.096,"category":"Unhealthy"},{"timestamp":"2026-08-29T15:00:00+00:00","aqi":161.213,"category":"Unhealthy"},{"timestamp":"2026-08-29T16:00:00+00:00","aqi":170.542,"category":"Unhealthy"},{"timestamp":"2026-08-29T17:00:00+00:00","aqi":179.27,"category":"Unhealthy"},{"timestamp":"2026-08-29T18:00:00+00:00","aqi":183.102,"category":"Unhealthy"},{"timestamp":"2026-08-29T19:00:00+00:00","aqi":184.413,"category":"Unhealthy"},{"timestamp":"2026-08-29T20:00:00+00:00","aqi":175.618,"category":"Unhealthy"},{"timestamp":"2026-08-29T21:00:00+00:00","aqi":166.049,"category":"Unhealthy"},{"timestamp":"2026-08-29T22:00:00+00:00","aqi":154.047,"category":"Unhealthy"},{"timestamp":"2026-08-29T23:00:00+00:00","aqi":155.101,"category":"Unhealthy"},{"timestamp":"2026-08-30T00:00:00+00:00","aqi":148.246,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T01:00:00+00:00","aqi":150.98,"category":"Unhealthy"},{"timestamp":"2026-08-30T02:00:00+00:00","aqi":147.564,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T03:00:00+00:00","aqi":154.269,"category":"Unhealthy"},{"timestamp":"2026-08-30T04:00:00+00:00","aqi":153.365,"category":"Unhealthy"},{"timestamp":"2026-08-30T05:00:00+00:00","aqi":145.668,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T06:00:00+00:00","aqi":141.938,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T07:00:00+00:00","aqi":144.297,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T08:00:00+00:00","aqi":141.401,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T09:00:00+00:00","aqi":141.844,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T10:00:00+00:00","aqi":147.965,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T11:00:00+00:00","aqi":141.624,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T12:00:00+00:00","aqi":145.634,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T13:00:00+00:00","aqi":146.876,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T14:00:00+00:00","aqi":153.688,"category":"Unhealthy"},{"timestamp":"2026-08-30T15:00:00+00:00","aqi":163.479,"category":"Unhealthy"},{"timestamp":"2026-08-30T16:00:00+00:00","aqi":166.897,"category":"Unhealthy"},{"timestamp":"2026-08-30T17:00:00+00:00","aqi":172.359,"category":"Unhealthy"},{"timestamp":"2026-08-30T18:00:00+00:00","aqi":181.998,"category":"Unhealthy"},{"timestamp":"2026-08-30T19:00:00+00:00","aqi":174.026,"category":"Unhealthy"},{"timestamp":"2026-08-30T20:00:00+00:00","aqi":170.905,"category":"Unhealthy"},{"timestamp":"2026-08-30T21:00:00+00:00","aqi":160.057,"category":"Unhealthy"},{"timestamp":"2026-08-30T22:00:00+00:00","aqi":144.053,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T23:00:00+00:00","aqi":139.71,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T00:00:00+00:00","aqi":135.419,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T01:00:00+00:00","aqi":133.61,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T02:00:00+00:00","aqi":136.745,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T03:00:00+00:00","aqi":133.686,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T04:00:00+00:00","aqi":136.267,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T05:00:00+00:00","aqi":139.173,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T06:00:00+00:00","aqi":139.544,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T07:00:00+00:00","aqi":134.56,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T08:00:00+00:00","aqi":133.853,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T09:00:00+00:00","aqi":129.988,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T10:00:00+00:00","aqi":130.378,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T11:00:00+00:00","aqi":128.538,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T12:00:00+00:00","aqi":125.496,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T13:00:00+00:00","aqi":120.427,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T14:00:00+00:00","aqi":123.862,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T15:00:00+00:00","aqi":136.722,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T16:00:00+00:00","aqi":150.58,"category":"Unhealthy"},{"timestamp":"2026-08-31T17:00:00+00:00","aqi":164.529,"category":"Unhealthy"},{"timestamp":"2026-08-31T18:00:00+00:00","aqi":169.617,"category":"Unhealthy"},{"timestamp":"2026-08-31T19:00:00+00:00","aqi":165.198,"category":"Unhealthy"},{"timestamp":"2026-08-31T20:00:00+00:00","aqi":161.124,"category":"Unhealthy"},{"timestamp":"2026-08-31T21:00:00+00:00","aqi":143.301,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T22:00:00+00:00","aqi":135.1,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T23:00:00+00:00","aqi":136.289,"category":"Unhealthy for Sensitive Groups"}]},"pollution":[{"key":"nitrogen_dioxide","label":"NO₂","symbol":"NO₂","unit":"µg/m³","value":68.3,"mean":38.497,"percentile":81.3,"status":"HIGH"},{"key":"carbon_monoxide","label":"CO","symbol":"CO","unit":"µg/m³","value":1474.0,"mean":1025.824,"percentile":78.6,"status":"ELEVATED"},{"key":"pm2_5","label":"PM2.5","symbol":"PM₂.₅","unit":"µg/m³","value":80.6,"mean":67.639,"percentile":73.9,"status":"ELEVATED"},{"key":"pm10","label":"PM10","symbol":"PM₁₀","unit":"µg/m³","value":114.1,"mean":99.408,"percentile":70.8,"status":"ELEVATED"},{"key":"sulphur_dioxide","label":"SO₂","symbol":"SO₂","unit":"µg/m³","value":17.4,"mean":15.826,"percentile":70.7,"status":"ELEVATED"},{"key":"ozone","label":"O₃","symbol":"O₃","unit":"µg/m³","value":25.0,"mean":91.505,"percentile":16.1,"status":"LOW"}],"dominant_pollutant":{"key":"nitrogen_dioxide","label":"NO₂","symbol":"NO₂","unit":"µg/m³","value":68.3,"mean":38.497,"percentile":81.3,"status":"HIGH"},"categories":[{"category":"Unhealthy","hours":40,"percentage":55.6},{"category":"Unhealthy for Sensitive Groups","hours":32,"percentage":44.4}],"events":{"total":21355,"high":6429,"elevated":21355,"preview":[{"timestamp":"2026-08-28T17:00:00+00:00","pollutant":"O3","severity":"elevated","event_type":"elevated_pollution"},{"timestamp":"2026-08-28T16:00:00+00:00","pollutant":"O3","severity":"elevated","event_type":"elevated_pollution"},{"timestamp":"2026-08-28T15:00:00+00:00","pollutant":"O3","severity":"high","event_type":"elevated_pollution"},{"timestamp":"2026-08-28T14:00:00+00:00","pollutant":"O3","severity":"high","event_type":"elevated_pollution"},{"timestamp":"2026-08-28T13:00:00+00:00","pollutant":"O3","severity":"high","event_type":"elevated_pollution"},{"timestamp":"2026-08-28T12:00:00+00:00","pollutant":"O3","severity":"high","event_type":"elevated_pollution"}]},"next_12_hours":[{"hour":1,"timestamp":"2026-08-29T00:00:00+00:00","aqi":156.41,"category":"Unhealthy"},{"hour":2,"timestamp":"2026-08-29T01:00:00+00:00","aqi":157.49,"category":"Unhealthy"},{"hour":3,"timestamp":"2026-08-29T02:00:00+00:00","aqi":158.19,"category":"Unhealthy"},{"hour":4,"timestamp":"2026-08-29T03:00:00+00:00","aqi":157.81,"category":"Unhealthy"},{"hour":5,"timestamp":"2026-08-29T04:00:00+00:00","aqi":158.29,"category":"Unhealthy"},{"hour":6,"timestamp":"2026-08-29T05:00:00+00:00","aqi":160.66,"category":"Unhealthy"},{"hour":7,"timestamp":"2026-08-29T06:00:00+00:00","aqi":163.57,"category":"Unhealthy"},{"hour":8,"timestamp":"2026-08-29T07:00:00+00:00","aqi":163.57,"category":"Unhealthy"},{"hour":9,"timestamp":"2026-08-29T08:00:00+00:00","aqi":159.62,"category":"Unhealthy"},{"hour":10,"timestamp":"2026-08-29T09:00:00+00:00","aqi":157.93,"category":"Unhealthy"},{"hour":11,"timestamp":"2026-08-29T10:00:00+00:00","aqi":155.96,"category":"Unhealthy"},{"hour":12,"timestamp":"2026-08-29T11:00:00+00:00","aqi":155.17,"category":"Unhealthy"}],"intelligence":{"headline":"Lahore is currently unhealthy.","health_message":"Air quality is unhealthy. Sensitive people should take precautions and prolonged outdoor exposure should be reduced.","driver_message":"NO₂ is currently the strongest relative pollution signal at the 81.3th percentile.","trajectory_message":"The production forecast is trending downward over the 72-hour horizon."}};
+
+
+// ============================================================
+// FORMATTERS
+// ============================================================
+
+function number(value, digits = 1) {
+
+    if (
+        value === null ||
+        value === undefined ||
+        Number.isNaN(Number(value))
+    ) {
+        return "N/A";
+    }
+
+    return Number(value).toLocaleString(
+        undefined,
+        {
+            minimumFractionDigits: digits,
+            maximumFractionDigits: digits
+        }
+    );
+}
+
+
+function categoryClass(category) {
+
+    const c = String(category).toLowerCase();
+
+    if (c.includes("unhealthy")) {
+        return "unhealthy";
+    }
+
+    if (c.includes("moderate")) {
+        return "moderate";
+    }
+
+    if (c.includes("good")) {
+        return "good";
+    }
+
+    return "moderate";
+}
+
+
+function formatTimestamp(value) {
+
+    const d = new Date(value);
+
+    return d.toLocaleString(
+        undefined,
+        {
+            day: "2-digit",
+            month: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+            hour12: false
+        }
+    );
+}
+
+
+// ============================================================
+// CURRENT AQI
+// ============================================================
+
+const currentAQI = DATA.current.aqi;
+const currentCategory = DATA.current.category;
+
+document.getElementById(
+    "currentAQINumber"
+).textContent = number(currentAQI, 1);
+
+document.getElementById(
+    "currentAQICategory"
+).textContent = currentCategory;
+
+document.getElementById(
+    "gaugeCenterNumber"
+).textContent = number(currentAQI, 0);
+
+document.getElementById(
+    "locationAQI"
+).textContent =
+    number(currentAQI, 1);
+
+document.getElementById(
+    "kpiCurrent"
+).textContent =
+    number(currentAQI, 1);
+
+document.getElementById(
+    "aqiSource"
+).textContent =
+    "Source: " + DATA.current.source;
+
+
+// ============================================================
+// LOCATION BADGE
+// ============================================================
+
+document.getElementById(
+    "locationBadge"
+).innerHTML =
+    `<span class="badge ${categoryClass(currentCategory)}">
+        ${currentCategory}
+    </span>`;
+
+
+// ============================================================
+// HEALTH MESSAGE
+// ============================================================
+
+document.getElementById(
+    "healthMessage"
+).textContent =
+    DATA.intelligence.health_message;
+
+document.getElementById(
+    "insightHealth"
+).textContent =
+    DATA.intelligence.health_message;
+
+document.getElementById(
+    "insightDriver"
+).textContent =
+    DATA.intelligence.driver_message;
+
+document.getElementById(
+    "insightTrajectory"
+).textContent =
+    DATA.intelligence.trajectory_message;
+
+
+// ============================================================
+// KPI
+// ============================================================
+
+document.getElementById(
+    "kpiMax"
+).textContent =
+    number(DATA.forecast.max, 1);
+
+document.getElementById(
+    "kpiMean"
+).textContent =
+    number(DATA.forecast.mean, 1);
+
+document.getElementById(
+    "kpiTrend"
+).textContent =
+    DATA.forecast.trend.charAt(0).toUpperCase()
+    + DATA.forecast.trend.slice(1);
+
+document.getElementById(
+    "peakValue"
+).textContent =
+    number(DATA.forecast.max, 1);
+
+
+// ============================================================
+// GAUGE
+// ============================================================
+
+function setGauge(aqi) {
+
+    const value =
+        Math.max(
+            0,
+            Math.min(500, Number(aqi))
+        );
+
+    /*
+        Semicircle:
+        center = 380,330
+        radius = 280
+
+        180 degrees:
+        AQI 0   = 180°
+        AQI 500 = 0°
+    */
+
+    const theta =
+        Math.PI -
+        (value / 500) * Math.PI;
+
+    const cx = 380;
+    const cy = 330;
+    const r = 280;
+
+    const x =
+        cx + r * Math.cos(theta);
+
+    const y =
+        cy - r * Math.sin(theta);
+
+    document.getElementById(
+        "gaugeMarker"
+    ).setAttribute("cx", x);
+
+    document.getElementById(
+        "gaugeMarker"
+    ).setAttribute("cy", y);
+
+    document.getElementById(
+        "gaugeNeedle"
+    ).setAttribute("x2", x);
+
+    document.getElementById(
+        "gaugeNeedle"
+    ).setAttribute("y2", y);
+}
+
+setGauge(currentAQI);
+
+
+// ============================================================
+// POLLUTANT CARDS
+// ============================================================
+
+const pollutantGrid =
+    document.getElementById(
+        "pollutantGrid"
+    );
+
+DATA.pollution.forEach((p, index) => {
+
+    const div =
+        document.createElement("div");
+
+    div.className = "card pollutant";
+
+    const percentile =
+        Math.max(
+            0,
+            Math.min(100, p.percentile)
+        );
+
+    div.innerHTML = `
+
+        <span class="pollutant-dot"></span>
+
+        <div class="pollutant-symbol">
+            ${p.symbol}
+        </div>
+
+        <div class="pollutant-value">
+            ${number(p.value, 3)}
+        </div>
+
+        <div class="pollutant-unit">
+            ${p.unit}
+        </div>
+
+        <div class="pollutant-mean">
+            Mean: ${number(p.mean, 3)}
+        </div>
+
+        <div class="bar">
+            <div
+                class="bar-fill"
+                style="width:${percentile}%"
+            ></div>
+        </div>
+
+        <div class="pollutant-footer">
+
+            <span>
+                ${number(p.percentile, 1)} percentile
+            </span>
+
+            <span>
+                ${p.status}
+            </span>
+
+        </div>
+    `;
+
+    pollutantGrid.appendChild(div);
+});
+
+
+// ============================================================
+// RANKING
+// ============================================================
+
+const ranking =
+    document.getElementById(
+        "ranking"
+    );
+
+DATA.pollution.forEach((p, index) => {
+
+    const item =
+        document.createElement("div");
+
+    item.className =
+        "ranking-item";
+
+    item.innerHTML = `
+
+        <div class="ranking-top">
+
+            <div class="ranking-name">
+                ${String(index + 1).padStart(2, "0")}
+                &nbsp;&nbsp;
+                ${p.symbol}
+            </div>
+
+            <div class="ranking-value">
+                ${number(p.percentile, 1)}%
+            </div>
+
+        </div>
+
+        <div class="ranking-track">
+
+            <div
+                class="ranking-fill"
+                style="width:${Math.min(
+                    100,
+                    Math.max(0, p.percentile)
+                )}%"
+            ></div>
+
+        </div>
+    `;
+
+    ranking.appendChild(item);
+});
+
+
+// ============================================================
+// FORECAST CHART
+// ============================================================
+
+function buildForecastChart() {
+
+    const container =
+        document.getElementById(
+            "forecastChart"
+        );
+
+    const points =
+        DATA.forecast.records;
+
+    const width = 1000;
+    const height = 370;
+
+    const padLeft = 55;
+    const padRight = 20;
+    const padTop = 25;
+    const padBottom = 35;
+
+    const values =
+        points.map(p => Number(p.aqi));
+
+    let min =
+        Math.min(...values);
+
+    let max =
+        Math.max(...values);
+
+    const range =
+        Math.max(20, max - min);
+
+    min -= range * .12;
+    max += range * .12;
+
+    const x = i =>
+        padLeft +
+        (
+            i /
+            Math.max(1, points.length - 1)
+        ) *
+        (
+            width -
+            padLeft -
+            padRight
+        );
+
+    const y = value =>
+        padTop +
+        (
+            1 -
+            (value - min) /
+            (max - min)
+        ) *
+        (
+            height -
+            padTop -
+            padBottom
+        );
+
+    let path = "";
+
+    points.forEach((point, i) => {
+
+        const px = x(i);
+        const py = y(point.aqi);
+
+        path +=
+            (i === 0 ? "M" : "L")
+            + ` ${px} ${py}`;
+    });
+
+    const areaPath =
+        path
+        + ` L ${x(points.length - 1)} ${height - padBottom}`
+        + ` L ${x(0)} ${height - padBottom}`
+        + " Z";
+
+    let grid = "";
+
+    const ticks = 5;
+
+    for (let i = 0; i <= ticks; i++) {
+
+        const value =
+            min +
+            (max - min) *
+            (i / ticks);
+
+        const py = y(value);
+
+        grid += `
+            <line
+                x1="${padLeft}"
+                y1="${py}"
+                x2="${width - padRight}"
+                y2="${py}"
+                class="grid-line"
+            />
+
+            <text
+                x="${padLeft - 10}"
+                y="${py + 4}"
+                text-anchor="end"
+                class="axis-text"
+            >
+                ${Math.round(value)}
+            </text>
+        `;
+    }
+
+    let pointMarkup = "";
+
+    let peakIndex = 0;
+
+    values.forEach((value, i) => {
+
+        if (
+            value >
+            values[peakIndex]
+        ) {
+            peakIndex = i;
+        }
+    });
+
+    pointMarkup = `
+        <circle
+            cx="${x(peakIndex)}"
+            cy="${y(values[peakIndex])}"
+            r="7"
+            class="chart-point"
+        />
+
+        <text
+            x="${x(peakIndex)}"
+            y="${y(values[peakIndex]) - 15}"
+            text-anchor="middle"
+            style="
+                fill:#ef6c50;
+                font-size:13px;
+                font-weight:900;
+            "
+        >
+            ${number(values[peakIndex], 1)}
+        </text>
+    `;
+
+    const startLabel =
+        formatTimestamp(points[0].timestamp);
+
+    const endLabel =
+        formatTimestamp(
+            points[points.length - 1].timestamp
+        );
+
+    container.innerHTML = `
+
+        <svg
+            class="forecast-svg"
+            viewBox="0 0 ${width} ${height}"
+            preserveAspectRatio="none"
+        >
+
+            ${grid}
+
+            <path
+                d="${areaPath}"
+                class="chart-area"
+            />
+
+            <path
+                d="${path}"
+                class="chart-line"
+            />
+
+            ${pointMarkup}
+
+            <text
+                x="${padLeft}"
+                y="${height - 8}"
+                class="axis-text"
+            >
+                ${startLabel}
+            </text>
+
+            <text
+                x="${width - padRight}"
+                y="${height - 8}"
+                text-anchor="end"
+                class="axis-text"
+            >
+                ${endLabel}
+            </text>
+
+        </svg>
+    `;
+
+    document.getElementById(
+        "chartSubtitle"
+    ).textContent =
+        `${startLabel} — ${endLabel}`;
+}
+
+buildForecastChart();
+
+
+// ============================================================
+// CATEGORY DISTRIBUTION
+// ============================================================
+
+const distribution =
+    document.getElementById(
+        "categoryDistribution"
+    );
+
+const categoryColors = {
+    "Good": "#79b96b",
+    "Moderate": "#d5bd4e",
+    "Unhealthy for Sensitive Groups": "#e6a341",
+    "Unhealthy": "#ef6c50",
+    "Very Unhealthy": "#b64b6d",
+    "Hazardous": "#7d2135"
+};
+
+let distributionHTML = "";
+
+DATA.categories.forEach(item => {
+
+    const width =
+        Math.min(
+            100,
+            Math.max(
+                0,
+                Number(item.percentage)
+            )
+        );
+
+    const color =
+        categoryColors[item.category]
+        || "#8ba29c";
+
+    distributionHTML += `
+
+        <div style="margin-bottom:20px">
+
+            <div style="
+                display:flex;
+                justify-content:space-between;
+                margin-bottom:7px;
+                font-size:12px;
+                font-weight:800;
+            ">
+
+                <span>
+                    ${item.category}
+                </span>
+
+                <span>
+                    ${item.hours}h · ${number(
+                        item.percentage,
+                        1
+                    )}%
+                </span>
+
+            </div>
+
+            <div style="
+                height:10px;
+                background:#e5ebe4;
+                border-radius:999px;
+                overflow:hidden;
+            ">
+
+                <div style="
+                    width:${width}%;
+                    height:100%;
+                    background:${color};
+                    border-radius:999px;
+                "></div>
+
+            </div>
+
+        </div>
+    `;
+});
+
+distribution.innerHTML =
+    distributionHTML;
+
+
+// ============================================================
+// EVENTS
+// ============================================================
+
+document.getElementById(
+    "eventTotal"
+).textContent =
+    Number(
+        DATA.events.total
+    ).toLocaleString();
+
+document.getElementById(
+    "eventHigh"
+).textContent =
+    Number(
+        DATA.events.high
+    ).toLocaleString();
+
+document.getElementById(
+    "eventElevated"
+).textContent =
+    Number(
+        DATA.events.elevated
+    ).toLocaleString();
+
+document.getElementById(
+    "eventDominant"
+).textContent =
+    DATA.dominant_pollutant
+        ? DATA.dominant_pollutant.symbol
+        : "N/A";
+
+
+// ============================================================
+// NEXT 12 HOURS TABLE
+// ============================================================
+
+const table =
+    document.getElementById(
+        "forecastTable"
+    );
+
+DATA.next_12_hours.forEach(item => {
+
+    const row =
+        document.createElement("tr");
+
+    const cls =
+        categoryClass(
+            item.category
+        );
+
+    row.innerHTML = `
+
+        <td>
+            H+${item.hour}
+        </td>
+
+        <td>
+            ${formatTimestamp(
+                item.timestamp
+            )}
+        </td>
+
+        <td class="aqi">
+            <span
+                style="
+                    display:inline-block;
+                    width:7px;
+                    height:7px;
+                    background:#ef6c50;
+                    border-radius:50%;
+                    margin-right:7px;
+                "
+            ></span>
+
+            ${number(item.aqi, 2)}
+        </td>
+
+        <td>
+            <span class="
+                mini-badge
+                ${cls}
+            ">
+                ${item.category}
+            </span>
+        </td>
+    `;
+
+    table.appendChild(row);
+});
+
+
+// ============================================================
+// KEYBOARD / PRINT
+// ============================================================
+
+document.addEventListener(
+    "keydown",
+    event => {
+
+        if (
+            event.ctrlKey &&
+            event.key.toLowerCase() === "p"
+        ) {
+            return;
+        }
+
+    }
+);
+
+</script>
+
+
+
+
+
+<script id="pearl-step25-refresh-contract">
+(function () {
+  window.PEARL_LIVE_REFRESH = {
+    enabled: true,
+    recommendedIntervalMinutes: 15,
+    source: "step25-generated-local-data",
+    note: "Refresh the generated dashboard package to obtain new observations."
+  };
+})();
+</script>
+
+
+<!-- PEARL_STEP25_LIVE_BRIDGE_START -->
+<script id="pearl-step25-live-bridge">
+(function () {
+  "use strict";
+
+  window.PEARL_LIVE_INTELLIGENCE = {"schema_version":"25.0","generated_at_utc":"2026-08-29T10:32:46.745918+00:00","step":25,"target":"us_aqi","location":{"city":"Lahore","area":"Lahore Cantonment","country":"Pakistan","latitude":31.5204,"longitude":74.3587,"timezone":"Asia/Karachi","timezone_label":"Pakistan Standard Time (PKT)","station":"Lahore Cantonment","location_source":"configured_location_context"},"current":{"aqi":157.0,"category":"Unhealthy","band":{"label":"Unhealthy","low":151,"high":200,"percent":12.24},"source":"observed_dataset","observed_at":"2026-08-28T23:00:00+00:00"},"forecast":{"available":true,"rows":72,"minimum":120.427,"maximum":184.413,"mean":151.797,"median":153.867,"category":"Unhealthy","trend":"falling","start":"2026-08-29T00:00:00+00:00","end":"2026-08-31T23:00:00+00:00","series":[{"timestamp":"2026-08-29T00:00:00+00:00","aqi":156.411,"category":"Unhealthy"},{"timestamp":"2026-08-29T01:00:00+00:00","aqi":157.486,"category":"Unhealthy"},{"timestamp":"2026-08-29T02:00:00+00:00","aqi":158.189,"category":"Unhealthy"},{"timestamp":"2026-08-29T03:00:00+00:00","aqi":157.807,"category":"Unhealthy"},{"timestamp":"2026-08-29T04:00:00+00:00","aqi":158.288,"category":"Unhealthy"},{"timestamp":"2026-08-29T05:00:00+00:00","aqi":160.662,"category":"Unhealthy"},{"timestamp":"2026-08-29T06:00:00+00:00","aqi":163.567,"category":"Unhealthy"},{"timestamp":"2026-08-29T07:00:00+00:00","aqi":163.575,"category":"Unhealthy"},{"timestamp":"2026-08-29T08:00:00+00:00","aqi":159.625,"category":"Unhealthy"},{"timestamp":"2026-08-29T09:00:00+00:00","aqi":157.926,"category":"Unhealthy"},{"timestamp":"2026-08-29T10:00:00+00:00","aqi":155.957,"category":"Unhealthy"},{"timestamp":"2026-08-29T11:00:00+00:00","aqi":155.171,"category":"Unhealthy"},{"timestamp":"2026-08-29T12:00:00+00:00","aqi":154.811,"category":"Unhealthy"},{"timestamp":"2026-08-29T13:00:00+00:00","aqi":156.58,"category":"Unhealthy"},{"timestamp":"2026-08-29T14:00:00+00:00","aqi":161.096,"category":"Unhealthy"},{"timestamp":"2026-08-29T15:00:00+00:00","aqi":161.213,"category":"Unhealthy"},{"timestamp":"2026-08-29T16:00:00+00:00","aqi":170.542,"category":"Unhealthy"},{"timestamp":"2026-08-29T17:00:00+00:00","aqi":179.27,"category":"Unhealthy"},{"timestamp":"2026-08-29T18:00:00+00:00","aqi":183.102,"category":"Unhealthy"},{"timestamp":"2026-08-29T19:00:00+00:00","aqi":184.413,"category":"Unhealthy"},{"timestamp":"2026-08-29T20:00:00+00:00","aqi":175.618,"category":"Unhealthy"},{"timestamp":"2026-08-29T21:00:00+00:00","aqi":166.049,"category":"Unhealthy"},{"timestamp":"2026-08-29T22:00:00+00:00","aqi":154.047,"category":"Unhealthy"},{"timestamp":"2026-08-29T23:00:00+00:00","aqi":155.101,"category":"Unhealthy"},{"timestamp":"2026-08-30T00:00:00+00:00","aqi":148.246,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T01:00:00+00:00","aqi":150.98,"category":"Unhealthy"},{"timestamp":"2026-08-30T02:00:00+00:00","aqi":147.564,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T03:00:00+00:00","aqi":154.269,"category":"Unhealthy"},{"timestamp":"2026-08-30T04:00:00+00:00","aqi":153.365,"category":"Unhealthy"},{"timestamp":"2026-08-30T05:00:00+00:00","aqi":145.668,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T06:00:00+00:00","aqi":141.938,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T07:00:00+00:00","aqi":144.297,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T08:00:00+00:00","aqi":141.401,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T09:00:00+00:00","aqi":141.844,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T10:00:00+00:00","aqi":147.965,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T11:00:00+00:00","aqi":141.624,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T12:00:00+00:00","aqi":145.634,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T13:00:00+00:00","aqi":146.876,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T14:00:00+00:00","aqi":153.688,"category":"Unhealthy"},{"timestamp":"2026-08-30T15:00:00+00:00","aqi":163.479,"category":"Unhealthy"},{"timestamp":"2026-08-30T16:00:00+00:00","aqi":166.897,"category":"Unhealthy"},{"timestamp":"2026-08-30T17:00:00+00:00","aqi":172.359,"category":"Unhealthy"},{"timestamp":"2026-08-30T18:00:00+00:00","aqi":181.998,"category":"Unhealthy"},{"timestamp":"2026-08-30T19:00:00+00:00","aqi":174.026,"category":"Unhealthy"},{"timestamp":"2026-08-30T20:00:00+00:00","aqi":170.905,"category":"Unhealthy"},{"timestamp":"2026-08-30T21:00:00+00:00","aqi":160.057,"category":"Unhealthy"},{"timestamp":"2026-08-30T22:00:00+00:00","aqi":144.053,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-30T23:00:00+00:00","aqi":139.71,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T00:00:00+00:00","aqi":135.419,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T01:00:00+00:00","aqi":133.61,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T02:00:00+00:00","aqi":136.745,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T03:00:00+00:00","aqi":133.686,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T04:00:00+00:00","aqi":136.267,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T05:00:00+00:00","aqi":139.173,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T06:00:00+00:00","aqi":139.544,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T07:00:00+00:00","aqi":134.56,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T08:00:00+00:00","aqi":133.853,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T09:00:00+00:00","aqi":129.988,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T10:00:00+00:00","aqi":130.378,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T11:00:00+00:00","aqi":128.538,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T12:00:00+00:00","aqi":125.496,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T13:00:00+00:00","aqi":120.427,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T14:00:00+00:00","aqi":123.862,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T15:00:00+00:00","aqi":136.722,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T16:00:00+00:00","aqi":150.58,"category":"Unhealthy"},{"timestamp":"2026-08-31T17:00:00+00:00","aqi":164.529,"category":"Unhealthy"},{"timestamp":"2026-08-31T18:00:00+00:00","aqi":169.617,"category":"Unhealthy"},{"timestamp":"2026-08-31T19:00:00+00:00","aqi":165.198,"category":"Unhealthy"},{"timestamp":"2026-08-31T20:00:00+00:00","aqi":161.124,"category":"Unhealthy"},{"timestamp":"2026-08-31T21:00:00+00:00","aqi":143.301,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T22:00:00+00:00","aqi":135.1,"category":"Unhealthy for Sensitive Groups"},{"timestamp":"2026-08-31T23:00:00+00:00","aqi":136.289,"category":"Unhealthy for Sensitive Groups"}]},"pollution":{"available":6,"total":6,"dominant":"NO2","ingredients":[{"pollutant":"PM2.5","value":80.6,"percentile":73.87,"trend":"stable","available":true},{"pollutant":"PM10","value":114.1,"percentile":70.82,"trend":"stable","available":true},{"pollutant":"O3","value":25.0,"percentile":16.05,"trend":"rising","available":true},{"pollutant":"NO2","value":68.3,"percentile":81.33,"trend":"falling","available":true},{"pollutant":"SO2","value":17.4,"percentile":70.7,"trend":"rising","available":true},{"pollutant":"CO","value":1474.0,"percentile":78.55,"trend":"falling","available":true}],"source":"C:\Users\muhammad.khan\Desktop\PAQIPredictor\data\processed\lahore_features_hourly.csv","timestamp_column":"time","columns":{"PM2.5":"pm2_5","PM10":"pm10","O3":"ozone","NO2":"nitrogen_dioxide","SO2":"sulphur_dioxide","CO":"carbon_monoxide"}},"alerts":{"count":1,"items":[{"severity":"elevated","type":"aqi","title":"Unhealthy AQI","message":"AQI is currently in the unhealthy range."}]},"location_context":{"city":"Lahore","area":"Lahore Cantonment","country":"Pakistan","station":"Lahore Cantonment","latitude":31.5204,"longitude":74.3587,"timezone":"Asia/Karachi","timezone_label":"Pakistan Standard Time (PKT)"},"system":{"model_training":false,"model_selection":false,"validation":false,"test":false,"future_target_leakage":"NONE","dashboard_layer":"STEP 23 PRESERVED","live_layer":"STEP 25"}};
+
+  function text(selector, value) {
+    var el = document.querySelector(selector);
+    if (el && value !== undefined && value !== null) {
+      el.textContent = value;
+    }
+  }
+
+  function number(value, digits) {
+    if (value === null || value === undefined || isNaN(Number(value))) return "—";
+    return Number(value).toFixed(digits || 0);
+  }
+
+  function updateCommonSelectors(data) {
+    var current = data.current || {};
+    var location = data.location || {};
+    var forecast = data.forecast || {};
+    var pollution = data.pollution || {};
+
+    /*
+     * Only update elements when Step 23 already exposes a matching semantic
+     * selector. This prevents Step 25 from changing the visual structure.
+     */
+    text("[data-pearl-current-aqi]", number(current.aqi, 0));
+    text("[data-current-aqi]", number(current.aqi, 0));
+    text("#current-aqi", number(current.aqi, 0));
+
+    text("[data-pearl-aqi-category]", current.category || "Unknown");
+    text("[data-current-aqi-category]", current.category || "Unknown");
+    text("#current-aqi-category", current.category || "Unknown");
+
+    text("[data-pearl-city]", location.city || "Lahore");
+    text("[data-pearl-area]", location.area || "Lahore Cantonment");
+    text("[data-pearl-station]", location.station || "Lahore Cantonment");
+    text("[data-pearl-timezone]", location.timezone_label || "PKT");
+
+    text("[data-pearl-forecast-mean]", number(forecast.mean, 1));
+    text("[data-pearl-forecast-min]", number(forecast.minimum, 1));
+    text("[data-pearl-forecast-max]", number(forecast.maximum, 1));
+
+    text(
+      "[data-pearl-dominant-pollutant]",
+      pollution.dominant || "—"
+    );
+
+    var band = current.band || {};
+    var meter = document.querySelector("[data-pearl-aqi-meter]");
+    if (meter && band.percent !== null && band.percent !== undefined) {
+      meter.style.setProperty("--pearl-aqi-position", band.percent + "%");
+      meter.setAttribute("aria-valuenow", number(current.aqi, 0));
+      meter.setAttribute("aria-valuetext", current.category || "");
+    }
+  }
+
+  function updatePollutantCards(data) {
+    var ingredients =
+      data.pollution && data.pollution.ingredients
+        ? data.pollution.ingredients
+        : [];
+
+    ingredients.forEach(function (item) {
+      var key = String(item.pollutant || "")
+        .toLowerCase()
+        .replace(/[^a-z0-9]/g, "");
+
+      var selectors = [
+        '[data-pearl-pollutant="' + item.pollutant + '"]',
+        '[data-pollutant="' + item.pollutant + '"]',
+        '[data-pearl-pollutant="' + key + '"]'
+      ];
+
+      selectors.forEach(function (selector) {
+        var card = document.querySelector(selector);
+        if (!card) return;
+
+        var value = card.querySelector(
+          "[data-pollutant-value], .pollutant-value"
+        );
+        var pct = card.querySelector(
+          "[data-pollutant-percentile], .pollutant-percentile"
+        );
+        var trend = card.querySelector(
+          "[data-pollutant-trend], .pollutant-trend"
+        );
+
+        if (value) value.textContent =
+          item.value === null ? "—" : number(item.value, 2);
+
+        if (pct) pct.textContent =
+          item.percentile === null ? "—" : number(item.percentile, 0) + "%";
+
+        if (trend) trend.textContent = item.trend || "stable";
+      });
+    });
+  }
+
+  function updateTimestamp(data) {
+    var generated = data.generated_at_utc;
+    var observed = data.current && data.current.observed_at;
+
+    text("[data-pearl-last-updated]", generated || "—");
+    text("[data-last-updated]", generated || "—");
+    text("[data-pearl-observed-at]", observed || "—");
+  }
+
+  function notifyExistingDashboard(data) {
+    try {
+      window.dispatchEvent(
+        new CustomEvent("pearl:live-aqi-updated", {
+          detail: data
+        })
+      );
+    } catch (e) {}
+
+    if (typeof window.onPearlLiveAQIUpdate === "function") {
+      try {
+        window.onPearlLiveAQIUpdate(data);
+      } catch (e) {}
+    }
+  }
+
+  function initialize() {
+    var data = window.PEARL_LIVE_INTELLIGENCE;
+    if (!data) return;
+
+    updateCommonSelectors(data);
+    updatePollutantCards(data);
+    updateTimestamp(data);
+    notifyExistingDashboard(data);
+  }
+
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initialize);
+  } else {
+    initialize();
+  }
+})();
+</script>
+<!-- PEARL_STEP25_LIVE_BRIDGE_END -->
+
+</body>
+</html>

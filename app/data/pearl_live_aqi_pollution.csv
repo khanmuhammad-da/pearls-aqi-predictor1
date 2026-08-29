@@ -1,0 +1,7 @@
+pollutant,value,percentile,trend,available
+PM2.5,80.6,73.87,stable,True
+PM10,114.1,70.82,stable,True
+O3,25.0,16.05,rising,True
+NO2,68.3,81.33,falling,True
+SO2,17.4,70.7,rising,True
+CO,1474.0,78.55,falling,True

@@ -1,0 +1,2 @@
+severity,type,title,message
+elevated,aqi,Unhealthy AQI,AQI is currently in the unhealthy range.
