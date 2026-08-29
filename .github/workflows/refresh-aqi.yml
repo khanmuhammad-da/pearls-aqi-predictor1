@@ -10,9 +10,11 @@ permissions:
 
 jobs:
   refresh-aqi:
+
     runs-on: ubuntu-latest
 
     steps:
+
       - name: Checkout repository
         uses: actions/checkout@v4
 
@@ -33,7 +35,7 @@ jobs:
           git add app/data/pearl_intelligence_dashboard_data.json
 
           if git diff --cached --quiet; then
-            echo "No AQI data changes to commit."
+            echo "No AQI data changes."
           else
             git commit -m "chore: refresh live AQI data"
             git push

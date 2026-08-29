@@ -43,3 +43,12 @@ reports/public_production_deployment/
 # Python cache
 app/__pycache__/
 scripts/__pycache__/
+
+# Local deployment packages - not production source
+reports/final_public_deployment/
+reports/public_production_deployment/
+reports/production_deployment/
+
+# Python cache
+__pycache__/
+*.py[cod]

@@ -1,4 +1,4 @@
-from pathlib import Path
+﻿from pathlib import Path
 import json
 from datetime import datetime, timezone
 
@@ -12,10 +12,7 @@ BASE_DIR = Path(__file__).resolve().parent
 DASHBOARD_DIR = BASE_DIR / "dashboard"
 DATA_DIR = BASE_DIR / "data"
 
-DASHBOARD = (
-    DASHBOARD_DIR
-    / "pearl_intelligence_dashboard.html"
-)
+DASHBOARD = DASHBOARD_DIR / "pearl_intelligence_dashboard.html"
 
 app = FastAPI(
     title="Pearls AQI Predictor",
@@ -24,9 +21,9 @@ app = FastAPI(
 )
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # STATIC DATA
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 app.mount(
     "/data",
@@ -35,13 +32,12 @@ app.mount(
 )
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # DASHBOARD
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 @app.get("/", include_in_schema=False)
 def root():
-
     return FileResponse(
         DASHBOARD,
         media_type="text/html",
@@ -50,16 +46,15 @@ def root():
 
 @app.get("/dashboard", include_in_schema=False)
 def dashboard():
-
     return FileResponse(
         DASHBOARD,
         media_type="text/html",
     )
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # HEALTH
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 @app.get("/api/health")
 def health():
@@ -73,17 +68,14 @@ def health():
     }
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # LIVE INTELLIGENCE
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 @app.get("/api/intelligence")
 def intelligence():
 
-    path = (
-        DATA_DIR
-        / "pearl_live_aqi_intelligence.json"
-    )
+    path = DATA_DIR / "pearl_live_aqi_intelligence.json"
 
     if not path.exists():
 
@@ -97,11 +89,7 @@ def intelligence():
 
     try:
 
-        with path.open(
-            "r",
-            encoding="utf-8"
-        ) as f:
-
+        with path.open("r", encoding="utf-8") as f:
             data = json.load(f)
 
         return data
@@ -117,9 +105,9 @@ def intelligence():
         )
 
 
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 # API INFO
-# ---------------------------------------------------------------------------
+# ------------------------------------------------------------
 
 @app.get("/api")
 def api_info():
