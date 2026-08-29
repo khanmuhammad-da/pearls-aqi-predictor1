@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 
@@ -3035,5 +3035,94 @@ document.addEventListener(
 </script>
 <!-- PEARL_STEP25_LIVE_BRIDGE_END -->
 
+<!-- PEARL_HOURLY_LIVE_REFRESH_START -->
+<script>
+(function () {
+    "use strict";
+
+    const LIVE_API = "/api/intelligence";
+    const REFRESH_INTERVAL = 60 * 60 * 1000;
+
+    async function refreshLiveAQI() {
+        try {
+            const response = await fetch(
+                LIVE_API + "?t=" + Date.now(),
+                {
+                    cache: "no-store",
+                    headers: {
+                        "Accept": "application/json"
+                    }
+                }
+            );
+
+            if (!response.ok) {
+                throw new Error("HTTP " + response.status);
+            }
+
+            const data = await response.json();
+
+            window.PEARL_LIVE_INTELLIGENCE = data;
+
+            if (data.current) {
+
+                const aqi = Number(data.current.aqi);
+
+                const aqiNumber =
+                    document.getElementById("currentAQINumber");
+
+                if (aqiNumber && Number.isFinite(aqi)) {
+                    aqiNumber.textContent = aqi.toFixed(1);
+                }
+
+                const aqiCategory =
+                    document.getElementById("currentAQICategory");
+
+                if (aqiCategory) {
+                    aqiCategory.textContent =
+                        data.current.category || "Unknown";
+                }
+
+                const locationAQI =
+                    document.getElementById("locationAQI");
+
+                if (locationAQI && Number.isFinite(aqi)) {
+                    locationAQI.textContent = aqi.toFixed(1);
+                }
+
+                const source =
+                    document.getElementById("aqiSource");
+
+                if (source) {
+                    source.textContent =
+                        data.current.aqi_source ||
+                        "Open-Meteo Air Quality API";
+                }
+            }
+
+            console.log(
+                "[PEARLS] Live AQI refreshed:",
+                data.current ? data.current.aqi : "N/A"
+            );
+
+        } catch (error) {
+
+            console.error(
+                "[PEARLS] Live AQI refresh failed:",
+                error
+            );
+        }
+    }
+
+    refreshLiveAQI();
+
+    setInterval(
+        refreshLiveAQI,
+        REFRESH_INTERVAL
+    );
+
+})();
+</script>
+<!-- PEARL_HOURLY_LIVE_REFRESH_END -->
 </body>
 </html>
+
