@@ -4,7 +4,7 @@
   "dashboard": {
     "name": "Pearl Intelligence Dashboard",
     "type": "Live Production Intelligence",
-    "generated_at": "2026-09-03T05:39:22.621924+00:00"
+    "generated_at": "2026-09-03T10:49:41.968371+00:00"
   },
   "location": {
     "city": "Lahore",
@@ -19,7 +19,7 @@
   },
   "data_freshness": {
     "status": "FRESH",
-    "checked_at": "2026-09-03T05:39:22.621924+00:00",
+    "checked_at": "2026-09-03T10:49:41.968371+00:00",
     "observed_at": "2026-09-03T00:00",
     "source": "Open-Meteo Air Quality API"
   },
@@ -108,12 +108,12 @@
   "forecast": {
     "available": true,
     "rows": 72,
-    "minimum": 87.0,
-    "maximum": 201.0,
-    "mean": 139.13888888888889,
-    "median": 145.0,
+    "minimum": 99.0,
+    "maximum": 202.0,
+    "mean": 142.26388888888889,
+    "median": 144.0,
     "category": "Unhealthy for Sensitive Groups",
-    "trend": "falling",
+    "trend": "rising",
     "start": "2026-09-03T00:00",
     "end": "2026-09-05T23:00",
     "series": [
@@ -149,8 +149,8 @@
       },
       {
         "timestamp": "2026-09-03T06:00",
-        "aqi": 151.0,
-        "category": "Unhealthy"
+        "aqi": 150.0,
+        "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-03T07:00",
@@ -164,207 +164,207 @@
       },
       {
         "timestamp": "2026-09-03T09:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T10:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T11:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T12:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T13:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T14:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T15:00",
-        "aqi": 152.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T16:00",
-        "aqi": 169.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T17:00",
-        "aqi": 189.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T18:00",
-        "aqi": 201.0,
-        "category": "Very Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T19:00",
-        "aqi": 200.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T20:00",
-        "aqi": 185.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T21:00",
-        "aqi": 161.0,
-        "category": "Unhealthy"
-      },
-      {
-        "timestamp": "2026-09-03T22:00",
         "aqi": 151.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-03T23:00",
+        "timestamp": "2026-09-03T10:00",
+        "aqi": 151.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-03T11:00",
+        "aqi": 151.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-03T12:00",
         "aqi": 150.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
-        "timestamp": "2026-09-04T00:00",
+        "timestamp": "2026-09-03T13:00",
         "aqi": 150.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
-        "timestamp": "2026-09-04T01:00",
-        "aqi": 149.0,
+        "timestamp": "2026-09-03T14:00",
+        "aqi": 150.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
-        "timestamp": "2026-09-04T02:00",
-        "aqi": 148.0,
+        "timestamp": "2026-09-03T15:00",
+        "aqi": 150.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
-        "timestamp": "2026-09-04T03:00",
-        "aqi": 146.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T04:00",
-        "aqi": 145.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T05:00",
-        "aqi": 144.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T06:00",
-        "aqi": 143.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T07:00",
-        "aqi": 142.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T08:00",
-        "aqi": 140.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T09:00",
-        "aqi": 138.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T10:00",
-        "aqi": 136.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T11:00",
-        "aqi": 134.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T12:00",
-        "aqi": 133.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T13:00",
-        "aqi": 132.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T14:00",
-        "aqi": 130.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T15:00",
-        "aqi": 133.0,
-        "category": "Unhealthy for Sensitive Groups"
-      },
-      {
-        "timestamp": "2026-09-04T16:00",
-        "aqi": 154.0,
+        "timestamp": "2026-09-03T16:00",
+        "aqi": 158.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-04T17:00",
-        "aqi": 170.0,
+        "timestamp": "2026-09-03T17:00",
+        "aqi": 172.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-04T18:00",
+        "timestamp": "2026-09-03T18:00",
         "aqi": 180.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-04T19:00",
-        "aqi": 179.0,
+        "timestamp": "2026-09-03T19:00",
+        "aqi": 178.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-04T20:00",
-        "aqi": 166.0,
+        "timestamp": "2026-09-03T20:00",
+        "aqi": 167.0,
         "category": "Unhealthy"
       },
       {
-        "timestamp": "2026-09-04T21:00",
+        "timestamp": "2026-09-03T21:00",
+        "aqi": 150.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-03T22:00",
         "aqi": 143.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
-        "timestamp": "2026-09-04T22:00",
-        "aqi": 122.0,
+        "timestamp": "2026-09-03T23:00",
+        "aqi": 141.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
+        "timestamp": "2026-09-04T00:00",
+        "aqi": 139.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T01:00",
+        "aqi": 136.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T02:00",
+        "aqi": 134.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T03:00",
+        "aqi": 133.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T04:00",
+        "aqi": 131.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T05:00",
+        "aqi": 130.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T06:00",
+        "aqi": 130.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T07:00",
+        "aqi": 130.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T08:00",
+        "aqi": 129.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T09:00",
+        "aqi": 128.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T10:00",
+        "aqi": 128.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T11:00",
+        "aqi": 126.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T12:00",
+        "aqi": 125.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T13:00",
+        "aqi": 124.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T14:00",
+        "aqi": 123.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T15:00",
+        "aqi": 149.0,
+        "category": "Unhealthy for Sensitive Groups"
+      },
+      {
+        "timestamp": "2026-09-04T16:00",
+        "aqi": 167.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T17:00",
+        "aqi": 183.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T18:00",
+        "aqi": 193.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T19:00",
+        "aqi": 194.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T20:00",
+        "aqi": 186.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T21:00",
+        "aqi": 171.0,
+        "category": "Unhealthy"
+      },
+      {
+        "timestamp": "2026-09-04T22:00",
+        "aqi": 152.0,
+        "category": "Unhealthy"
+      },
+      {
         "timestamp": "2026-09-04T23:00",
-        "aqi": 119.0,
+        "aqi": 123.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T00:00",
-        "aqi": 117.0,
+        "aqi": 113.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T01:00",
-        "aqi": 114.0,
+        "aqi": 112.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
@@ -374,17 +374,17 @@
       },
       {
         "timestamp": "2026-09-05T03:00",
-        "aqi": 109.0,
+        "aqi": 110.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T04:00",
-        "aqi": 107.0,
+        "aqi": 108.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T05:00",
-        "aqi": 105.0,
+        "aqi": 107.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
@@ -399,7 +399,7 @@
       },
       {
         "timestamp": "2026-09-05T08:00",
-        "aqi": 104.0,
+        "aqi": 103.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
@@ -414,68 +414,68 @@
       },
       {
         "timestamp": "2026-09-05T11:00",
-        "aqi": 99.0,
+        "aqi": 100.0,
         "category": "Moderate"
       },
       {
         "timestamp": "2026-09-05T12:00",
-        "aqi": 98.0,
+        "aqi": 99.0,
         "category": "Moderate"
       },
       {
         "timestamp": "2026-09-05T13:00",
-        "aqi": 96.0,
+        "aqi": 99.0,
         "category": "Moderate"
       },
       {
         "timestamp": "2026-09-05T14:00",
-        "aqi": 94.0,
-        "category": "Moderate"
+        "aqi": 116.0,
+        "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T15:00",
-        "aqi": 102.0,
+        "aqi": 141.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T16:00",
-        "aqi": 126.0,
-        "category": "Unhealthy for Sensitive Groups"
+        "aqi": 164.0,
+        "category": "Unhealthy"
       },
       {
         "timestamp": "2026-09-05T17:00",
-        "aqi": 147.0,
-        "category": "Unhealthy for Sensitive Groups"
+        "aqi": 184.0,
+        "category": "Unhealthy"
       },
       {
         "timestamp": "2026-09-05T18:00",
-        "aqi": 159.0,
+        "aqi": 200.0,
         "category": "Unhealthy"
       },
       {
         "timestamp": "2026-09-05T19:00",
-        "aqi": 162.0,
-        "category": "Unhealthy"
+        "aqi": 202.0,
+        "category": "Very Unhealthy"
       },
       {
         "timestamp": "2026-09-05T20:00",
-        "aqi": 154.0,
+        "aqi": 195.0,
         "category": "Unhealthy"
       },
       {
         "timestamp": "2026-09-05T21:00",
-        "aqi": 132.0,
-        "category": "Unhealthy for Sensitive Groups"
+        "aqi": 174.0,
+        "category": "Unhealthy"
       },
       {
         "timestamp": "2026-09-05T22:00",
-        "aqi": 102.0,
+        "aqi": 146.0,
         "category": "Unhealthy for Sensitive Groups"
       },
       {
         "timestamp": "2026-09-05T23:00",
-        "aqi": 87.0,
-        "category": "Moderate"
+        "aqi": 107.0,
+        "category": "Unhealthy for Sensitive Groups"
       }
     ]
   },
