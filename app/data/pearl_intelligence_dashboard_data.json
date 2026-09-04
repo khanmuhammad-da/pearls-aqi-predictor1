@@ -5,7 +5,7 @@
     "step": 23,
     "target": "us_aqi",
     "forecast_horizon": 72,
-    "generated_at": "2026-09-04T01:12:49.718258+00:00",
+    "generated_at": "2026-09-04T06:19:52.763441+00:00",
     "data_source": "Open-Meteo Air Quality API"
   },
   "location": {
@@ -404,7 +404,7 @@
     "dashboard": {
       "name": "Pearl Intelligence Dashboard",
       "type": "Live Production Intelligence",
-      "generated_at": "2026-09-04T01:12:49.718258+00:00"
+      "generated_at": "2026-09-04T06:19:52.763441+00:00"
     },
     "location": {
       "city": "Lahore",
@@ -419,7 +419,7 @@
     },
     "data_freshness": {
       "status": "FRESH",
-      "checked_at": "2026-09-04T01:12:49.718258+00:00",
+      "checked_at": "2026-09-04T06:19:52.763441+00:00",
       "observed_at": "2026-09-04T00:00",
       "source": "Open-Meteo Air Quality API"
     },
