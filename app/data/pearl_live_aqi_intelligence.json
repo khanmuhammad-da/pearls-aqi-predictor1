@@ -4,7 +4,7 @@
   "dashboard": {
     "name": "Pearl Intelligence Dashboard",
     "type": "Live Production Intelligence",
-    "generated_at": "2026-09-11T19:56:01.574185+00:00"
+    "generated_at": "2026-09-11T22:20:58.567120+00:00"
   },
   "location": {
     "city": "Lahore",
@@ -19,7 +19,7 @@
   },
   "data_freshness": {
     "status": "FRESH",
-    "checked_at": "2026-09-11T19:56:01.574185+00:00",
+    "checked_at": "2026-09-11T22:20:58.567120+00:00",
     "observed_at": "2026-09-12T00:00",
     "source": "Open-Meteo Air Quality API"
   },
