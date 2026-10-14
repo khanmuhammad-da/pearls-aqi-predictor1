@@ -4,7 +4,7 @@
   "dashboard": {
     "name": "Pearl Intelligence Dashboard",
     "type": "Live Production Intelligence",
-    "generated_at": "2026-10-14T13:23:34.402682+00:00"
+    "generated_at": "2026-10-14T18:07:25.424755+00:00"
   },
   "location": {
     "city": "Lahore",
@@ -19,7 +19,7 @@
   },
   "data_freshness": {
     "status": "FRESH",
-    "checked_at": "2026-10-14T13:23:34.402682+00:00",
+    "checked_at": "2026-10-14T18:07:25.424755+00:00",
     "observed_at": "2026-10-14T00:00",
     "source": "Open-Meteo Air Quality API"
   },
@@ -98,7 +98,7 @@
       {
         "pollutant": "CO",
         "source_column": "carbon_monoxide",
-        "value": 2731.0,
+        "value": 2728.0,
         "available": true,
         "unit": "dataset units"
       }
